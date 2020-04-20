@@ -1,0 +1,36 @@
+export interface User {
+  biography: string;
+  blocked_by_viewer: boolean;
+  restricted_by_viewer?: any;
+  country_block: boolean;
+  external_url?: any;
+  external_url_linkshimmed?: any;
+  edge_followed_by: Edgefollowedby;
+  followed_by_viewer: boolean;
+  edge_follow: Edgefollowedby;
+  follows_viewer: boolean;
+  full_name: string;
+  has_ar_effects: boolean;
+  has_channel: boolean;
+  has_blocked_viewer: boolean;
+  highlight_reel_count: number;
+  has_requested_viewer: boolean;
+  id: string;
+  is_business_account: boolean;
+  is_joined_recently: boolean;
+  business_category_name: string;
+  category_id: string;
+  overall_category_name?: any;
+  is_private: boolean;
+  is_verified: boolean;
+  edge_mutual_followed_by: Edgemutualfollowedby;
+  profile_pic_url: string;
+  profile_pic_url_hd: string;
+  requested_by_viewer: boolean;
+  username: string;
+  connected_fb_page?: any;
+  edge_felix_video_timeline: Edgefelixvideotimeline;
+  edge_owner_to_timeline_media: Edgeownertotimelinemedia;
+  edge_saved_media: Edgesavedmedia;
+  edge_media_collections: Edgesavedmedia;
+}
