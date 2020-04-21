@@ -1,6 +1,6 @@
 @import "../../assets/css/font-awesome.css";
 @import "../../assets/css/style.css";
-@import "//fonts.googleapis.com/css?family=Crete+Round:400,400i&amp;subset=latin-ext";
+@import url("https://fonts.googleapis.com/css?family=Crete+Round:400,400i&amp;subset=latin-ext");
 @import url("https://fonts.googleapis.com/css?family=Lexend+Deca|Dosis&display=swap");
 body {
   margin: 0;
