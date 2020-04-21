@@ -1,4 +1,4 @@
-export interface TopLevel {
+export interface RootObjects {
   logging_page_id: string;
   show_suggested_profiles: boolean;
   show_follow_dialog: boolean;
@@ -15,8 +15,8 @@ export interface User {
   blocked_by_viewer: boolean;
   restricted_by_viewer: boolean;
   country_block: boolean;
-  external_url: string;
-  external_url_linkshimmed: string;
+  external_url: null;
+  external_url_linkshimmed: null;
   edge_followed_by: EdgeFollowClass;
   followed_by_viewer: boolean;
   edge_follow: EdgeFollowClass;
@@ -30,8 +30,8 @@ export interface User {
   id: string;
   is_business_account: boolean;
   is_joined_recently: boolean;
-  business_category_name: null;
-  category_id: null;
+  business_category_name: string;
+  category_id: string;
   overall_category_name: null;
   is_private: boolean;
   is_verified: boolean;
@@ -39,21 +39,26 @@ export interface User {
   profile_pic_url: string;
   profile_pic_url_hd: string;
   requested_by_viewer: boolean;
-  username: Username;
+  username: string;
   connected_fb_page: null;
-  edge_felix_video_timeline: EdgeFelixVideoTimelineClass;
-  edge_owner_to_timeline_media: EdgeFelixVideoTimelineClass;
-  edge_saved_media: EdgeFelixVideoTimelineClass;
-  edge_media_collections: EdgeFelixVideoTimelineClass;
+  edge_felix_combined_post_uploads: PurpleEdge;
+  edge_felix_combined_draft_uploads: PurpleEdge;
+  edge_felix_video_timeline: PurpleEdge;
+  edge_felix_drafts: PurpleEdge;
+  edge_felix_pending_post_uploads: PurpleEdge;
+  edge_felix_pending_draft_uploads: PurpleEdge;
+  edge_owner_to_timeline_media: PurpleEdge;
+  edge_saved_media: PurpleEdge;
+  edge_media_collections: PurpleEdge;
 }
 
-export interface EdgeFelixVideoTimelineClass {
+export interface PurpleEdge {
   count: number;
   page_info: PageInfo;
-  edges: EdgeFelixVideoTimelineEdge[];
+  edges: EdgeFelixCombinedDraftUploadsEdge[];
 }
 
-export interface EdgeFelixVideoTimelineEdge {
+export interface EdgeFelixCombinedDraftUploadsEdge {
   node: PurpleNode;
 }
 
@@ -80,9 +85,9 @@ export interface PurpleNode {
   thumbnail_src: string;
   thumbnail_resources: ThumbnailResource[];
   felix_profile_grid_crop?: null;
-  encoding_status?: null;
+  encoding_status?: string;
   is_published?: boolean;
-  product_type?: ProductType;
+  product_type?: string;
   title?: string;
   video_duration?: number;
   video_view_count?: number;
@@ -141,11 +146,7 @@ export interface TentacledNode {
 
 export interface Owner {
   id: string;
-  username: Username;
-}
-
-export enum Username {
-  TheFoodieDad = 'the_foodie_dad',
+  username: string;
 }
 
 export interface Location {
@@ -153,10 +154,6 @@ export interface Location {
   has_public_page: boolean;
   name: string;
   slug: string;
-}
-
-export enum ProductType {
-  Igtv = 'igtv',
 }
 
 export interface ThumbnailResource {

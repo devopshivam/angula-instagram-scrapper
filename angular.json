@@ -8,7 +8,7 @@
       "schematics": {},
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "my",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -42,12 +42,6 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
-<<<<<<< HEAD
-              "aot": true,
-              "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true
-=======
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
@@ -63,37 +57,24 @@
                   "maximumError": "10kb"
                 }
               ]
->>>>>>> initial commit
             }
           }
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-<<<<<<< HEAD
-            "browserTarget": "demo:build"
-          },
-          "configurations": {
-            "production": {
-              "browserTarget": "demo:build:production"
-=======
             "browserTarget": "angular-insta-scrapper:build"
           },
           "configurations": {
             "production": {
               "browserTarget": "angular-insta-scrapper:build:production"
->>>>>>> initial commit
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-<<<<<<< HEAD
-            "browserTarget": "demo:build"
-=======
             "browserTarget": "angular-insta-scrapper:build"
->>>>>>> initial commit
           }
         },
         "test": {
@@ -101,38 +82,17 @@
           "options": {
             "main": "src/test.ts",
             "polyfills": "src/polyfills.ts",
-<<<<<<< HEAD
-            "tsConfig": "src/tsconfig.spec.json",
-            "karmaConfig": "src/karma.conf.js",
-            "styles": [
-              "styles.css"
-            ],
-            "scripts": [],
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ]
-=======
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": ["src/styles.css"],
             "scripts": []
->>>>>>> initial commit
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-<<<<<<< HEAD
-              "src/tsconfig.app.json",
-              "src/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-=======
               "tsconfig.app.json",
               "tsconfig.spec.json",
               "e2e/tsconfig.json"
@@ -150,16 +110,10 @@
             "production": {
               "devServerTarget": "angular-insta-scrapper:serve:production"
             }
->>>>>>> initial commit
           }
         }
       }
     }
   },
-<<<<<<< HEAD
-  "defaultProject": "demo"
-}
-=======
   "defaultProject": "angular-insta-scrapper"
 }
->>>>>>> initial commit

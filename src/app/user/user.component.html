@@ -1,0 +1,48 @@
+<div class="main" *ngIf="user">
+  <h1>Instagram Profile</h1>
+  <div class="agile_main_grid">
+    <div class="agile_main_grid_left">
+      <div class="agile_main_grid_left1">
+        <h2>@{{ user.username }}</h2>
+      </div>
+    </div>
+    <section class="slider">
+      <div class="flexslider">
+        <ul class="slides">
+          <li>
+            <div class="agile_main_grid_left_grid">
+              <div class="agile_main_grid_left2">
+                <img src="{{ user.profile_pic_url }}" alt=" " />
+                <h3>{{ user.full_name }}</h3>
+                <p>{{ user.business_category_name }}</p>
+
+                <div class="agile_main_grid_left2_grid">
+                  <div class="agile_main_grid_left2_grid_left">
+                    <h4>Followers</h4>
+                    <h5>{{ user.edge_followed_by.count }}</h5>
+                  </div>
+                  <div class="agile_main_grid_left2_grid_left">
+                    <h4>Posts</h4>
+                    <h5>{{ user.edge_owner_to_timeline_media.count }}</h5>
+                  </div>
+                  <div class="agile_main_grid_left2_grid_left">
+                    <h4>Following</h4>
+                    <h5>{{ user.edge_follow.count }}</h5>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+                <div class="agile_main_grid_left2_grid_bottom">
+                  <a
+                    href="https://instagram.com/{{ user.username }}"
+                    target="_blank"
+                    >View Profile</a
+                  >
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </div>
+</div>

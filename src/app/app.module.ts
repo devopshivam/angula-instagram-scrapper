@@ -9,7 +9,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
-import { UserDataService } from './user-data.service';
+import { UserDataService } from './service/user-data.service';
+import { UserComponent } from './user/user.component';
 
 @NgModule({
   imports: [
@@ -24,8 +25,10 @@ import { UserDataService } from './user-data.service';
     HelloComponent,
     NavbarComponent,
     SearchBarComponent,
+    UserComponent,
   ],
   bootstrap: [AppComponent],
   providers: [UserDataService],
+  exports: [UserComponent],
 })
 export class AppModule {}

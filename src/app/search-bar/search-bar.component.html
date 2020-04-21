@@ -1,1 +1,23 @@
-<button (click)="sendGetRequest()">GET Users</button>
+<body>
+  <div class="searchbox">
+    <button class="btn-menu">
+      <img src="https://img.icons8.com/cute-clipart/24/000000/top-menu.png" />
+    </button>
+    <input
+      id="search"
+      type="text"
+      placeholder="Search..."
+      name="search"
+      class="search"
+      [(ngModel)]="search"
+    />
+    <button (click)="sendGetRequest()" class="btn-search">
+      <img src="https://img.icons8.com/cotton/24/000000/search--v2.png" />
+    </button>
+  </div>
+  <script type="application/x-javascript">
+    addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); }
+  </script>
+  <!-- //meta tags -->
+  <my-user [user]="user"></my-user>
+</body>
